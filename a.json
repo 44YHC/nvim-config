@@ -1,0 +1,47 @@
+[
+  { "id": "lead-new", "text": "New lead" },
+  { "id": "lead-reached-out", "text": "Reached out" },
+  { "id": "lead-responded", "text": "Responded" },
+  { "id": "applicant-new", "text": "New applicant" },
+  {
+    "id": "2d3f9584-fe1e-41fe-864c-501f3b00d3c8",
+    "text": "Basic Fit Questions"
+  },
+  {
+    "id": "29151cac-3c91-4d52-a2c2-89507d3b1dbc",
+    "text": "Subject Matter Questions"
+  },
+  { "id": "b55ab927-3519-47ac-a46f-6ecee0d970d7", "text": "CCAT" },
+  { "id": "bbfa7173-e0dd-40ef-ae36-ee65d7ab9bb5", "text": "HM Resume Review" },
+  {
+    "id": "e28440d8-dd61-496a-bbea-f2a8a6a84317",
+    "text": "Recruiter Screening"
+  },
+  {
+    "id": "94dc9076-33d1-4656-b526-4a1f94c0e400",
+    "text": "Real Work Scenario"
+  },
+  { "id": "f8075ef6-1b80-480b-a35e-9001cbe7160a", "text": "Interview 1" },
+  { "id": "552dc79d-4ddf-4a57-8d12-cbed027eaa81", "text": "Interview 2" },
+  { "id": "97f7312b-49b9-42a6-81f5-6a3c5f3c37f8", "text": "Consider" },
+  { "id": "1fb34514-f127-4eaa-9388-7ee776e9d85d", "text": "ELT Interview" },
+  { "id": "ebb8cca9-f4d9-4ffa-a518-955cc6a9a31a", "text": "Verbal Offer" },
+  { "id": "ad56ac10-4fd3-4bd2-a4ad-d9546e932671", "text": "Written Offer" },
+  { "id": "ea48066f-2b64-43cb-b9b2-663b63bdbc00", "text": "Background Check" },
+  {
+    "id": "16c54cac-96df-478b-8923-0ec0dab34f8f",
+    "text": "Background Check Completed"
+  },
+  {
+    "id": "da89b1dd-c5c6-440a-8ad8-857a7939e980",
+    "text": "Recruiter Phone Screen"
+  },
+  {
+    "id": "db0747c2-6a75-4401-87eb-00782b09e59e",
+    "text": "Hiring Manager Phone Screen"
+  },
+  { "id": "ea99479b-86f2-4315-ab38-e20c37b0f517", "text": "On-site interview" },
+  { "id": "868ce77b-748a-4861-a029-c83dcf8e826d", "text": "Skills Assessment" },
+  { "id": "f1dcfc78-8f2b-41c8-8b0b-bcaaba3a6deb", "text": "Reference check" },
+  { "id": "offer", "text": "Offer" }
+]
