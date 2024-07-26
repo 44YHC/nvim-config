@@ -2,6 +2,7 @@ local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
 keymap.set("n", "x", '"_x')
+keymap.set("n", "ciw", '"_ciw')
 
 -- Increment/decrement
 keymap.set("n", "+", "<C-a>")
@@ -43,5 +44,5 @@ keymap.set("n", "<C-S-j>", "<C-w>-")
 
 -- Diagnostics
 keymap.set("n", "<C-j>", function()
-	vim.diagnostic.goto_next()
+  vim.diagnostic.goto_next()
 end, opts)
