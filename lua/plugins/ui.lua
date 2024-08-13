@@ -55,7 +55,7 @@ return {
   {
     "rcarriga/nvim-notify",
     opts = {
-      timeout = 2500,
+      timeout = 1500,
       background_colour = "#000000",
       render = "wrapped-compact",
     },
@@ -186,7 +186,7 @@ return {
           group_empty = true,
         },
         filters = {
-          dotfiles = true,
+          dotfiles = false,
           custom = {
             "node_modules/.*",
           },
@@ -203,9 +203,9 @@ return {
         },
       })
 
-      if vim.fn.argc(-1) == 0 then
-        vim.cmd("NvimTreeFocus")
-      end
+      -- if vim.fn.argc(-1) == 0 then
+      --   vim.cmd("NvimTreeFocus")
+      -- end
     end,
   },
 }
