@@ -1,9 +1,6 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
-keymap.set("n", "x", '"_x')
-keymap.set("n", "ciw", '"_ciw')
-
 -- Increment/decrement
 keymap.set("n", "+", "<C-a>")
 keymap.set("n", "-", "<C-x>")
@@ -41,6 +38,42 @@ keymap.set("n", "<C-S-h>", "<C-w><")
 keymap.set("n", "<C-S-l>", "<C-w>>")
 keymap.set("n", "<C-S-k>", "<C-w>+")
 keymap.set("n", "<C-S-j>", "<C-w>-")
+
+keymap.set("n", "x", '"_x')
+
+-- Change inner word
+keymap("n", "ciw", '"_ciw', opts)
+
+-- Change inner sentence
+keymap("n", "cis", '"_cis', opts)
+
+-- Change inner paragraph
+keymap("n", "cip", '"_cip', opts)
+
+-- Change inner tag block
+keymap("n", "cit", '"_cit', opts)
+
+-- Change inner curly braces block
+keymap("n", "ci{", '"_ci{', opts)
+
+-- Change inner square brackets block
+keymap("n", "ci[", '"_ci[', opts)
+
+-- Change inner parentheses block
+keymap("n", "ci(", '"_ci(', opts)
+keymap("n", "ci)", '"_ci)', opts)
+
+-- Change inner angle brackets block
+keymap("n", "ci<", '"_ci<', opts)
+
+-- Change inner double quotes
+keymap("n", 'ci"', '"_ci"', opts)
+
+-- Change inner single quote
+keymap("n", "ci'", "\"_ci'", opts)
+
+-- Change inner backtick
+keymap("n", "ci`", '"_ci`', opts)
 
 -- Diagnostics
 keymap.set("n", "<C-j>", function()
