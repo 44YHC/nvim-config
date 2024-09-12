@@ -8,74 +8,57 @@ keymap.set("n", "-", "<C-x>")
 -- Select all
 keymap.set("n", "<C-a>", "gg<S-v>G")
 
+-- Window navigation
+-- keymap.set("n", "<S-h>", "<C-w>h", opts)
+-- keymap.set("n", "<S-l>", "<C-w>l", opts)
+keymap.set("n", "<S-j>", "<C-w>j", opts)
+-- keymap.set("n", "<S-k>", "<C-w>k", opts)
+
 -- Save file and quit
 keymap.set("n", "<Leader>w", ":update<Return>", opts)
 keymap.set("n", "<Leader>q", ":quit<Return>", opts)
 keymap.set("n", "<Leader>Q", ":qa<Return>", opts)
 
 -- File explorer with NvimTree
-keymap.set("n", "<Leader>f", ":NvimTreeFindFile<Return>", opts)
-keymap.set("n", "<Leader>t", ":NvimTreeToggle<Return>", opts)
+-- keymap.set("n", "<Leader>f", ":NvimTreeFindFile<Return>", opts)
+-- keymap.set("n", "<Leader>t", ":NvimTreeToggle<Return>", opts)
 
 -- Tabs
-keymap.set("n", "te", ":tabedit")
-keymap.set("n", "<tab>", ":tabnext<Return>", opts)
-keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
-keymap.set("n", "tw", ":tabclose<Return>", opts)
+-- keymap.set("n", "te", ":tabedit")
+-- keymap.set("n", "<tab>", ":tabnext<Return>", opts)
+-- keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
+-- keymap.set("n", "tw", ":tabclose<Return>", opts)
 
 -- Split window
 keymap.set("n", "ss", ":split<Return>", opts)
 keymap.set("n", "sv", ":vsplit<Return>", opts)
 
 -- Move window
-keymap.set("n", "sh", "<C-w>h")
-keymap.set("n", "sk", "<C-w>k")
-keymap.set("n", "sj", "<C-w>j")
-keymap.set("n", "sl", "<C-w>l")
+-- keymap.set("n", "sh", "<C-w>h")
+-- keymap.set("n", "sk", "<C-w>k")
+-- keymap.set("n", "sj", "<C-w>j")
+-- keymap.set("n", "sl", "<C-w>l")
 
 -- Resize window
-keymap.set("n", "<C-S-h>", "<C-w><")
-keymap.set("n", "<C-S-l>", "<C-w>>")
-keymap.set("n", "<C-S-k>", "<C-w>+")
-keymap.set("n", "<C-S-j>", "<C-w>-")
+-- keymap.set("n", "<C-S-h>", "<C-w><")
+-- keymap.set("n", "<C-S-l>", "<C-w>>")
+-- keymap.set("n", "<C-S-k>", "<C-w>+")
+-- keymap.set("n", "<C-S-j>", "<C-w>-")
 
+-- Puts all x targets into the black hole register
 keymap.set("n", "x", '"_x')
 
--- Change inner word
-keymap("n", "ciw", '"_ciw', opts)
+-- Puts all c* targets into the black hole register
+keymap.set("n", "c", '"_c', opts)
+keymap.set("n", "C", '"_C', opts)
+keymap.set("v", "c", '"_c', opts)
+keymap.set("v", "C", '"_C', opts)
 
--- Change inner sentence
-keymap("n", "cis", '"_cis', opts)
-
--- Change inner paragraph
-keymap("n", "cip", '"_cip', opts)
-
--- Change inner tag block
-keymap("n", "cit", '"_cit', opts)
-
--- Change inner curly braces block
-keymap("n", "ci{", '"_ci{', opts)
-
--- Change inner square brackets block
-keymap("n", "ci[", '"_ci[', opts)
-
--- Change inner parentheses block
-keymap("n", "ci(", '"_ci(', opts)
-keymap("n", "ci)", '"_ci)', opts)
-
--- Change inner angle brackets block
-keymap("n", "ci<", '"_ci<', opts)
-
--- Change inner double quotes
-keymap("n", 'ci"', '"_ci"', opts)
-
--- Change inner single quote
-keymap("n", "ci'", "\"_ci'", opts)
-
--- Change inner backtick
-keymap("n", "ci`", '"_ci`', opts)
+-- Paste over visual selection without storing the deleted text in the register
+keymap.set("v", "p", '"_dP', opts) -- Delete selected text to black hole register, then paste
+keymap.set("v", "P", '"_dP', opts) -- Same for pasting before
 
 -- Diagnostics
-keymap.set("n", "<C-j>", function()
+keymap.set("n", "sj", function()
   vim.diagnostic.goto_next()
 end, opts)
