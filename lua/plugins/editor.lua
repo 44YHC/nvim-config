@@ -7,13 +7,19 @@ return {
       {
         ";f",
         function()
-          require("fzf-lua").files()
+          require("fzf-lua").files({
+            ["alt-i"] = { require("fzf-lua").actions.toggle_ignore },
+            ["alt-h"] = { require("fzf-lua").actions.toggle_hidden },
+          })
         end,
       },
       {
         ";r",
         function()
-          require("fzf-lua").live_grep()
+          require("fzf-lua").live_grep({
+            ["alt-i"] = { require("fzf-lua").actions.toggle_ignore },
+            ["alt-h"] = { require("fzf-lua").actions.toggle_hidden },
+          })
         end,
       },
     },
